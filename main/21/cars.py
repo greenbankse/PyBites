@@ -33,7 +33,9 @@ print(get_all_matching_models(cars,'CO'))
 def sort_car_models(cars=cars):
     """return a copy of the cars dict with the car models (values)
        sorted alphabetically"""
-    for make, models in cars.items():
-        cars[make] = sorted(models)
-    return cars
+    # for make, models in cars.items():
+    #     cars[make] = sorted(models)
+    # return cars
+    return {manufacturer: sorted(models) for
+            manufacturer, models in cars.items()}
 print(sort_car_models(cars))
