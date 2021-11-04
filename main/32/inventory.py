@@ -1,7 +1,13 @@
-items = [{'id': 1, 'name': 'laptop', 'value': 1000},
-         {'id': 2, 'name': 'chair', 'value': 300},
-         {'id': 3, 'name': 'book', 'value': 20}]
+items = [
+    {"id": 1, "name": "laptop", "value": 1000},
+    {"id": 2, "name": "chair", "value": 300},
+    {"id": 3, "name": "book", "value": 20},
+]
 
+from copy import deepcopy
 
 def duplicate_items(items):
-    return items[:]
+    return deepcopy(items)
+
+
+print(duplicate_items(items))
